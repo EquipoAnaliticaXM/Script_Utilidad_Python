@@ -28,8 +28,8 @@ class Download_Files(object):
     def get_file(self, anio, mes, dia, archivo, version, agente):
         try:
             archivo_dia = archivo + mes + dia
-            print('ftp://' + self.usuario + ':' + self.contraseña + '@sv01.xm.com.co/Usuariosk/' + agente + '/SIC/COMERCIA/' + anio + '-' + mes + '/' + archivo_dia +'.' + version)
-            print('files/' + archivo_dia +'.' + version)
+#            print('ftp://' + self.usuario + ':' + self.contraseña + '@sv01.xm.com.co/Usuariosk/' + agente + '/SIC/COMERCIA/' + anio + '-' + mes + '/' + archivo_dia +'.' + version)
+#            print('files/' + archivo_dia +'.' + version)
             urllib.request.urlretrieve('ftp://' + self.usuario + ':' + self.contraseña + '@sv01.xm.com.co/Usuariosk/' + agente + '/SIC/COMERCIA/' + anio + '-' + mes + '/' + archivo_dia +'.' + version, 'files/' + archivo_dia +'.' + version)
             print('Archivo descargado: ' + archivo_dia + '.' + version)
         except:
